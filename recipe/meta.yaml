@@ -1,0 +1,33 @@
+{% set name="pybind11-stubgen" %}
+{% set version="0.8.6" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: be6f3f07ae6c5a83b8bf383ec22d4d8ac13d1de6182f11f86045cb26db1ec349
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+about:
+  home: https://github.com/sizmailov/pybind11-stubgen
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: PEP 561 type stubs generator for pybind11 modules
+
+extra:
+  recipe-maintainers:
+    - sdvillal
