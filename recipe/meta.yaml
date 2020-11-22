@@ -25,7 +25,6 @@ requirements:
 about:
   home: https://github.com/sizmailov/pybind11-stubgen
   license: BSD-3-Clause
-  license_file: LICENSE
   summary: PEP 561 type stubs generator for pybind11 modules
 
 extra:
